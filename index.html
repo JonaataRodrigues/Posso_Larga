@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgba(137, 43, 226, 0.479);
+        }
+        html {
+            font-size: 30px;
+        }
+        #btn{
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 20px;
+            color: black;
+        }
+        #res {
+            margin: auto;
+            width: 200px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Posso larga ?</h1>
+    <br>    
+    <input  id="btn" type="button" onclick="larga()" value="Verificar"></input>
+    <p>
+        <div><img id="img" src=""></div>
+        <div id="res"></div>
+    </p>
+    <script>
+        function larga() {
+            let hora = new Date();
+            let largar = hora.getHours()
+            let img = document.getElementById('img')
+            
+            let res = document.getElementById('res')
+            if(largar >= 18){
+                
+                res.style.fontSize = '39px'
+                res.style.color = 'blue'
+                res.style.backgroundColor = 'black'
+                res.innerHTML = `SIM <p>Parabéns<p>`
+            }else {
+                img.src = 'gta.png'
+                res.style.fontSize = '20px'
+                res.style.backgroundColor = 'black'
+                res.style.color = 'red'
+                res.innerHTML = 'NÃO <p>KKKKKKKKKKK<p>'
+            }
+
+
+        }
+    </script>
+</body>
+</html>
